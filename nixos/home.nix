@@ -9,20 +9,23 @@
     # Symlink files from other locations
     file = {
       #".config/alacritty" = {
-      #  source = config.lib.file.mkOutOfStoreSymlink "/home/derbetakevin/Development/dotfiles/configurations/alacritty";
+      #  source = ../configurations/alacritty;
       #  recursive = true;
       #};
       ".config/conky" = {
-        source = config.lib.file.mkOutOfStoreSymlink "/home/derbetakevin/Development/dotfiles/configurations/conky";
+        source = ../configurations/conky;
         recursive = true;
       };
       ".config/fastfetch" = {
-        source = config.lib.file.mkOutOfStoreSymlink "/home/derbetakevin/Development/dotfiles/configurations/fastfetch";
+        source = ../configurations/fastfetch;
         recursive = true;
       };
       ".config/neofetch" = {
-        source = config.lib.file.mkOutOfStoreSymlink "/home/derbetakevin/Development/dotfiles/configurations/neofetch";
+        source = ../configurations/neofetch;
         recursive = true;
+      };
+      ".config/starship.toml" = {
+        source = ../configurations/starship.toml;
       };
     };
   };
