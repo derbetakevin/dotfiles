@@ -13,11 +13,12 @@ My Flake-Configuration for NixOS
 - Acer Travelmate 5760
 - AMD Ryzen 5 2400G with MSI B450 A-PRO
 
-### Available DE/WM 
+### Available DE/WM
 #### Desktop Environments
-- KDE Plasma
+- GNOME only [Games](/nixos/gnome-games.nix)
+- [KDE Plasma](/nixos/kde.nix) and [Games](/nixos/kde-games.nix)
 #### Window Managers
-- Hyprland
+- [Hyprland](/nixos/hyprland.nix)
 
 <small>All about Flakes -> https://nixos.wiki/wiki/Flakes<br>Thanks to [JerrySM64](https://github.com/JerrySM64) and the [NixOS Foundation](https://nixos.org/community/index.html)</small>
 
