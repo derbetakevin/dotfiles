@@ -4,19 +4,19 @@
 format = " [╭─$user]($style)@"
 show_always = true
 style_root = "bold red"
-style_user = "bold green"
+style_user = "bold cyan"
 
 # Second param
 [hostname]
 disabled = false
 format = "[$hostname]($style) in "
 ssh_only = false
-style = "bold green"
+style = "bold cyan"
 #trim_at = "-"
 
 # Third param
 [directory]
-style = "green"
+style = "cyan"
 truncate_to_repo = true
 truncation_length = 0
 truncation_symbol = "repo: "
@@ -38,7 +38,7 @@ style = "white"
 disabled = false
 format = "took [$duration]($style)"
 min_time = 1
-style = "bold green"
+style = "bold cyan"
 
 ## SECOND LINE/ROW: Prompt
 # Somethere at the beginning
@@ -67,13 +67,13 @@ threshold = 80
 [time]
 disabled = false
 format = "[ ├ $time]($style)\n"
-style = "bold green"
+style = "bold cyan"
 time_format = "%T"
 
 # Prompt: param 2
 [character]
 error_symbol = " [×](bold red)"
-success_symbol = " [╰─λ](bold green)"
+success_symbol = " [╰─λ](bold cyan)"
 
 # SYMBOLS
 [status]
@@ -124,6 +124,62 @@ symbol = " "
 
 [nodejs]
 symbol = " "
+
+[os]
+#disabled = false
+style = "bg:color_os fg:color_foreground_dark"
+#format = '[$symbol(v$version)(  $edition)(  $codename)(  $type)]($style)[](bg:color_background_base fg:color_os)'
+## uncomment the format above for all available information and comment out the line below
+## format = '[$symbol]($style)[](bg:color_background_base fg:color_os)'
+## other variables:
+##   name = The current operating system name
+##   type = The current operating system type
+##   codename = The current operating system codename, if applicable
+##   edition = The current operating system edition, if applicable
+##   version = The current operating system version, if applicable
+
+[os.symbols]
+Alpaquita = " " # nf-fa-bell
+Alpine = " " # nf-linux-alpine
+Amazon = " " # nf-fa-amazon
+Android = " " # nf-dev-android
+Arch = " " # nf-linux-archlinux
+Artix = " " # nf-linux-artix
+CentOS = " " # nf-linux-centos
+Debian = " " # nf-linux-debian
+DragonFly = " " # nf-fae-butterfly
+Emscripten = " " # nf-fa-toggle_on
+EndeavourOS = " " # nf-linux-endeavour
+Fedora = " " # nf-linux-fedora
+FreeBSD = " " # nf-linux-freebsd
+Garuda = "󰛓 " # nf-md-feather
+Gentoo = " " # nf-linux-gentoo
+HardenedBSD = "󰔇  " # nf-md-tennis_ball
+Illumos = " " # nf-linux-illumos
+Linux = " " # nf-linux-tux
+Mabox = "󰆦  " # nf-fa-cube
+Macos = " " # nf-linux-apple
+Manjaro = " " # nf-linux-manjaro
+Mariner = " " # nf-fa-life_saver
+MidnightBSD = " " # nf-fa-moon_o
+Mint = "󰣭  " # nf-md-linux_mint
+NetBSD = " " # nf-fa-flag
+NixOS = " " # nf-linux-nixos
+OpenBSD = " " # nf-linux-openbsd
+OpenCloudOS = " " # nf-fa-cloud
+openEuler = "󰏒  " # nf-md-owl
+openSUSE = " " # nf-linux-opensuse
+OracleLinux = "󰌷  " # nf-md-link
+Pop = " " # nf-linux-pop_os
+Raspbian = " " # nf-linux-raspberry_pi
+Redhat = "󱄛 " # nf-md-redhat
+RedHatEnterprise = " " # nf-linux-redhat
+Redox = "󰀘  " # nf-md-orbit
+Solus = " " # nf-linux-solus
+SUSE = " " # nf-linux-opensuse
+Ubuntu = " " # nf-linux-ubuntu
+Unknown = " " # nf-fa-question_circle
+Windows = " " # nf-fa-windows
 
 [package]
 symbol = " "
