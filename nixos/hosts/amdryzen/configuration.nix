@@ -121,6 +121,10 @@
       enable = true;
       };
 
+    geary = {
+      enable = true;
+    };
+
     virt-manager = {
       enable = true;
     };
