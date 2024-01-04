@@ -11,6 +11,7 @@
     ../../hyprland.nix
     # ../../kde.nix
     # ../../kde-gaming.nix
+    ../../terminal.nix
     # ../../wayfire.nix
     # ../../xfce.nix
   ];

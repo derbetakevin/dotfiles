@@ -99,18 +99,12 @@
   };
 
   programs = {
-    command-not-found = {
-      enable = true;
-    };
     dconf = {
       enable = true;
     };
     firefox = {
       enable = true;
       languagePacks = ["de"];
-    };
-    neovim = {
-      enable = true;
     };
   };
 
@@ -180,48 +174,35 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    agedu
     anydesk
     brave
-    btop
-    cmatrix
     conky
     discord
-    duf
     evince
-    eza
     fsearch
     glxinfo
     gnome.gnome-disk-utility
     gparted
     hardinfo
-    htop
-    hyfetch
     libreoffice
     lm_sensors
     lsb-release
-    lsd
-    neofetch
     ntfs3g
     onlyoffice-bin
     pciutils
-    pfetch-rs
     remmina
     shortwave
     smartmontools
     standardnotes
     spotify
-    starship
     tdesktop
     teamviewer
     thunderbird-unwrapped
-    tiv
     usbutils
     unzip
     vesktop
     virt-viewer
     vlc
-    wget
     whatsapp-for-linux
     xdg-user-dirs
   ];

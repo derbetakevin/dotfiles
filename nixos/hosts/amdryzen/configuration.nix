@@ -10,6 +10,7 @@
     ../../kde.nix
     ../../kde-games.nix
     # ../../starship.nix
+    ../../terminal.nix
     # ../../wayfire.nix
     # ../../xfce.nix
   ];
@@ -166,11 +167,9 @@
       librewolf
       mcfly
       microsoft-edge
-      nvtop
       obs-studio
       onedrivegui
       putty
-      radeontop
       realvnc-vnc-viewer
       rpi-imager
       skypeforlinux
