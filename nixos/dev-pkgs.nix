@@ -37,7 +37,8 @@
       pkg-config
       powershell
       python311Full
-      vscode
+      vscode #Microsoft Variante
+      vscodium #Open Source Variante
     ];
   };
 }
