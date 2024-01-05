@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }: {
+{ config, pkgs, inputs, ... }: {
   
   # Bootloader, Kernel, Params and modules
   boot = {
@@ -111,13 +111,6 @@
     };
   };
 
-  # Environment Variables
-  environment = {
-    sessionVariables = {
-      MOZ_ENABLE_WAYLAND = "1";
-    };
-  };
-
   sound = {
     enable = true;
   };
@@ -141,6 +134,14 @@
   nix = {
     # Enable the flake command
     extraOptions = "experimental-features = nix-command flakes";
+    settings = {
+      extra-substituters = [
+        "https://viperml.cachix.org"
+      ];
+      extra-trusted-public-keys = [
+        "viperml.cachix.org-1:qZhKBMTfmcLL+OG6fj/hzsMEedgKvZVFRRAhq7j8Vh8="
+      ];
+    };
   };
 
 
@@ -176,39 +177,46 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    anydesk
-    brave
-    conky
-    discord
-    evince
-    fsearch
-    glxinfo
-    gnome.gnome-disk-utility
-    gparted
-    hardinfo
-    libreoffice
-    lm_sensors
-    lsb-release
-    ntfs3g
-    onlyoffice-bin
-    pciutils
-    remmina
-    shortwave
-    smartmontools
-    standardnotes
-    spotify
-    tdesktop
-    teamviewer
-    thunderbird-unwrapped
-    usbutils
-    unzip
-    vesktop
-    virt-viewer
-    vlc
-    whatsapp-for-linux
-    xdg-user-dirs
-  ];
+  environment = {
+    sessionVariables = {
+      FLAKE = "/home/derbetakevin/Development/dotfiles";
+      MOZ_ENABLE_WAYLAND = "1";
+    };
+    systemPackages = with pkgs; [
+      inputs.nh.packages.x86_64-linux.default
+      anydesk
+      brave
+      conky
+      discord
+      evince
+      fsearch
+      glxinfo
+      gnome.gnome-disk-utility
+      gparted
+      hardinfo
+      libreoffice
+      lm_sensors
+      lsb-release
+      ntfs3g
+      onlyoffice-bin
+      pciutils
+      remmina
+      shortwave
+      smartmontools
+      standardnotes
+      spotify
+      tdesktop
+      teamviewer
+      thunderbird-unwrapped
+      usbutils
+      unzip
+      vesktop
+      virt-viewer
+      vlc
+      whatsapp-for-linux
+      xdg-user-dirs
+    ];
+  };
 
   # Fonts
   fonts.packages = with pkgs; [

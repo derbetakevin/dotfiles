@@ -9,18 +9,27 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
     nixos-conf-editor.url = "github:vlinkz/nixos-conf-editor";
     nix-software-center.url = "github:vlinkz/nix-software-center";
-
+    # Home Manager (for /home files)
     home-manager = {
       url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs = {
+        nixpkgs = {
+          follows = "nixpkgs";
+        };
+      };
+    };
+    # Yet Another Nix Helper
+    nh = {
+      url = "github:viperML/nh";
+      inputs = {
+        nixpkgs = {
+          follows = "nixpkgs";
+        };
+      };
     };
   };
 
-  outputs = inputs @ {
-    self,
-    nixpkgs,
-    ...
-  }: {
+  outputs = inputs @ { self, nixpkgs, ... }: {
     nixosConfigurations = let
       user = "derbetakevin";
       mkHost = host:
