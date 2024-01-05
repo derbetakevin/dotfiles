@@ -126,6 +126,10 @@
       enable = true;
     };
 
+    thunar = {
+      enable = true;
+    };
+
     virt-manager = {
       enable = true;
     };
@@ -176,6 +180,7 @@
       spice
       teamspeak_client
       teamspeak5_client
+      ted
       tor-browser
       vivaldi
       win-virtio
