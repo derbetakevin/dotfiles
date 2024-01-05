@@ -25,7 +25,6 @@
     };
 
     environment.systemPackages = with pkgs; [
-      emacs
       gh
       gitFull
       github-desktop

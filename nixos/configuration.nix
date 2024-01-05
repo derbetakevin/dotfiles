@@ -60,6 +60,12 @@
       enable = true;
     };
 
+    emacs = {
+      enable = true;
+      package = pkgs.emacs-gtk;
+      install = true;
+    };
+
     flatpak = {
       enable = true;
     };
