@@ -77,16 +77,13 @@
       };
     };
 
-    # Hyprland-specific packages
+# Hyprland-specific packages
     environment = {
       systemPackages = with pkgs; [
         dunst
         ffmpeg
         ffmpegthumbnailer
         grimblast
-        libsForQt5.qt5.qtgraphicaleffects
-        libsForQt5.sddm-kcm
-        lxqt.lxqt-policykit
         kitty
         nwg-look
         pamixer
@@ -101,11 +98,18 @@
         wlogout
         wl-clipboard
         xarchiver
-        xfce.thunar
-        xfce.thunar-volman
-        xfce.thunar-archive-plugin
-        xfce.tumbler
-      ];
+      ] ++ (with libsForQt5; [
+        sddm-kcm
+      ]) ++ (with libsForQt5.qt5; [
+        qtgraphicaleffects
+      ]) ++ (with lxqt; [
+        lxqt-policykit
+      ]) ++ (with xfce; [
+        thunar
+        thunar-volman
+        thunar-archive-plugin
+        tumbler
+      ]);
       
       variables = {
         POLKIT_BIN = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";

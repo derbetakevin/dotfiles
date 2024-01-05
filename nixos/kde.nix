@@ -43,15 +43,18 @@
     };
 
     # KDE-specific packages
-    environment.systemPackages = with pkgs; [
-      kate
-      kcalc
-      libsForQt5.filelight
-      libsForQt5.kget
-      libsForQt5.kmail
-      libsForQt5.ktorrent
-      libsForQt5.kwallet-pam
-      pciutils
-    ];
+    environment = {
+      systemPackages = with pkgs; [
+        kate
+        kcalc
+        pciutils
+      ] ++ (with libsForQt5; [
+        filelight
+        kget
+        kmail
+        ktorrent
+        kwallet-pam
+      ]);
+    };
   };
 }

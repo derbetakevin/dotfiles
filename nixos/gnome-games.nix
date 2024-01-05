@@ -2,24 +2,27 @@
 
 { config, pkgs, ... }: {
   config = {
-    environment.systemPackages = with pkgs; [
-      gnome-2048
-      gnome.five-or-more
-      gnome.four-in-a-row
-      gnome.gnome-chess
-      gnome.gnome-klotski
-      gnome.gnome-mahjongg
-      gnome.gnome-mines
-      gnome.gnome-nibbles
-      gnome.gnome-robots
-      gnome.gnome-sudoku
-      gnome.gnome-taquin
-      gnome.gnome-tetravex
-      gnome.hitori
-      gnome.iagno
-      gnome.lightsoff
-      gnome.quadrapassel
-      gnome.tali
-    ];
+    environment = {
+      systemPackages = with pkgs; [
+        gnome-2048
+      ] ++ (with gnome; [
+        five-or-more
+        four-in-a-row
+        gnome-chess
+        gnome-klotski
+        gnome-mahjongg
+        gnome-mines
+        gnome-nibbles
+        gnome-robots
+        gnome-sudoku
+        gnome-taquin
+        gnome-tetravex
+        hitori
+        iagno
+        lightsoff
+        quadrapassel
+        tali
+      ]);
+    };
   };
 }
