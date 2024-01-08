@@ -125,6 +125,9 @@
     pulseaudio = {
       enable = false;
     };
+    uinput = {
+      enable = true;
+    };
   };
 
   security = {

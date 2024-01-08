@@ -69,9 +69,12 @@
     };
 
     udev = {
-      # Add Streamdeck MK.2 udev rule
       extraRules = ''
+        # Stream Deck MK.2
         SUBSYSTEMS=="usb", ATTRS{idVendor}=="0fd9", GROUP="users", TAG+="uaccess"
+
+        # Bluetooth Adapter
+        SUBSYSTEMS=="usb", ATTRS{idVendor}=="0a5c", GROUP="users", TAG+="uaccess"
       '';
     };
   };
@@ -132,6 +135,18 @@
 
     virt-manager = {
       enable = true;
+    };
+
+    zsh = {
+      enable = true;
+      autosuggestions = {
+        enable = true;
+        async = true;
+        strategy = ["completion"];
+      };
+      syntaxHighlighting = {
+        enable = true;
+      };
     };
   };
 

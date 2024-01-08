@@ -1,8 +1,13 @@
 { config, pkgs, ... }: {
 
   config = {  
+    boot = {
+      blacklistedKernelModules = [
+        "xpad"
+      ];
+    };
     programs = {
-       steam = {
+      steam = {
         enable = true;
         remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
         dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
@@ -15,6 +20,15 @@
         enable = true;
         };
       };
+    
+    services = {
+      udev = {
+        extraRules = ''
+          # Xbox Controllers
+          SUBSYSTEMS=="usb", ATTRS{idVendor}=="045e", GROUP="users", TAG+="uaccess"
+        '';
+      };
+    };
   
     # Gaming-specific packages
     environment.systemPackages = with pkgs; [
@@ -23,14 +37,16 @@
       dolphin-emu
       duckstation
       gamemode
+      #heroic (I use Flatpak)
       lutris
       mangohud
       mgba
       minecraft
       osu-lazer-bin
       pcsx2
-      retroarch
+      #retroarch (I use Flatpak)
       superTuxKart
+      wiiuse
       winePackages.stableFull
       winetricks
       xboxdrv
