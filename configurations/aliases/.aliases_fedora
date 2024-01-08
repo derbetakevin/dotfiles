@@ -1,0 +1,13 @@
+#---Fedora + RHEL---
+#Package Manager
+alias dnfin='sudo dnf install'
+alias dnfrein='sudo dnf reinstall'
+alias dnfrm='sudo dnf remove'
+alias dnfclean='sudo dnf clean all'
+alias rpmdb='sudo rpm --rebuilddb'
+alias dnfsync='sudo dnf distro-sync'
+#Updates
+alias allupdate='flatpak update && sudo dnf update'
+alias updateall='flatpak update && sudo dnf update'
+alias byebyewiegehts='flatpak update && sudo dnf update && reboot'
+alias fuckoff='flatpak update && sudo dnf update && poweroff'

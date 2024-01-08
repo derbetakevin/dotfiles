@@ -1,0 +1,7 @@
+#---Arch Linux---
+#Aliases
+source ~/.aliases_arch
+#zsh Extensions
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/doc/find-the-command/ftc.zsh askfirst

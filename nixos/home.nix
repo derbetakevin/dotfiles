@@ -27,6 +27,23 @@
       ".config/starship.toml" = {
         source = ../configurations/starship.toml;
       };
+
+      # Shell
+      ".bashrc" = {
+        source = ../configurations/bash/.bashrc;
+      };
+      ".config/fish/config.fish" = {
+        source = ../configurations/fish/config.fish;
+      };
+      ".zshrc" = {
+        source = ../configurations/zsh/.zshrc;
+      };
+      ".aliases" = {
+        source = ../configurations/aliases/.aliases;
+      };
+      ".aliases_nixos_flake" = {
+        source = ../configurations/aliases/.aliases_nixos_flake;
+      };
     };
   };
 }

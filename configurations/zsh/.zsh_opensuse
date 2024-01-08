@@ -1,0 +1,6 @@
+#---openSUSE Tumbleweed---
+#Aliases
+source ~/.aliases_opensuse
+#zsh Extensions
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh

@@ -1,0 +1,17 @@
+#---NixOS Flake---
+#Updatescript with Distrobox and Flatpaks
+alias updateall='bash ~/Development/dotfiles/scripts/updates-nix.sh'
+#Update or rebuild
+alias update-amd='nh os switch --nom --hostname amdryzen --update'
+alias update-acer='nh os switch --nom --hostname acertravelmate --update'
+alias rebuild-amd='nh os switch --nom --hostname amdryzen'
+alias rebuild-acer='nh os switch --nom --hostname acertravelmate'
+#Ask to update or rebuild
+alias update-amd-ask='nh os switch --nom --hostname amdryzen --update --ask'
+alias update-acer-ask='nh os switch --nom --hostname acertravelmate --update --ask'
+alias rebuild-amd-ask='nh os switch --nom --hostname amdryzen --ask'
+alias rebuild-acer-ask='nh os switch --nom --hostname acertravelmate --ask'
+#Generation options
+alias genlist='sudo nix-env -p /nix/var/nix/profiles/system --list-generations'
+alias genrm-amd='sudo nix-env -p /nix/var/nix/profiles/system --delete-generations old && nix-collect-garbage -d && nh os switch --nom --hostname amdryzen'
+alias genrm-acer='sudo nix-env -p /nix/var/nix/profiles/system --delete-generations old && nix-collect-garbage -d && nh os switch --nom --hostname acertravelmate'

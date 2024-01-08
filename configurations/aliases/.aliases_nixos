@@ -1,0 +1,9 @@
+#---NixOS---
+#Updates
+alias updateall='sudo nixos-rebuild switch --upgrade && nix-env --upgrade'
+alias update='sudo nixos-rebuild switch --upgrade'
+alias upgrade='sudo nixos-rebuild switch --upgrade'
+alias rebuild='sudo nixos-rebuild switch'
+alias genrm='sudo nix-env -p /nix/var/nix/profiles/system --delete-generations old && nix-collect-garbage -d && sudo nixos-rebuild switch'
+#Other
+alias conf='sudo nvim /etc/nixos/configuration.nix'

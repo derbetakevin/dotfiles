@@ -1,0 +1,21 @@
+#---Arch Linux---
+#Package Manager
+alias allpackages='exec pacman -Q | wc -l && echo Pacman && exec flatpak list | wc -l && echo Flatpak && exec snap list | wc -l && echo Snap'
+alias pacin='sudo pacman -S --needed'
+alias pacrein='sudo pacman -S'
+alias pacrm='sudo pacman -Rns'
+alias pac+rm='sudo pacman -Rcns'
+alias pacclean='sudo pacman -Rns $(pacman -Qtdq)'
+alias paruin='paru -S --needed'
+alias parurein='paru -S'
+alias parurm='paru -Rns'
+alias paru+rm='paru -Rcns'
+alias parup='paru -Syy'
+alias big="expac -H M '%m\t%n' | sort -h | nl"     # Sort installed packages according to size in MB
+alias gitpkg='pacman -Q | grep -i "\-git" | wc -l' # List amount of -git packages
+alias lastpkg="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
+#Updates
+alias allupdate='sudo snap refresh --list && sudo snap refresh && flatpak update && paru'
+alias updateall='sudo snap refresh --list && sudo snap refresh && flatpak update && paru'
+alias byebyewiegehts='sudo snap refresh --list && sudo snap refresh && flatpak update && paru && reboot'
+alias fuckoff='sudo snap refresh --list && sudo snap refresh && flatpak update && paru && poweroff'

@@ -1,0 +1,6 @@
+#---Ubuntu---
+#Aliases
+source ~/.aliases_ubuntu
+#zsh Extensions
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.local/share/zsh-autosuggestions.zsh #Manual install

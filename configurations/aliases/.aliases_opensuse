@@ -1,0 +1,13 @@
+#---openSUSE Tumbleweed---
+#Package Manager
+alias zypin='sudo zypper in --details'
+alias zypup='sudo zypper up --details'
+alias zypdup='sudo zypper dup --details'
+alias zyprm='sudo zypper rm --details'
+alias zypse='sudo zypper se'
+alias zypsegrep='sudo zypper se -i | grep'
+alias zyprepos='sudo zypper repos --details'
+alias zypref='sudo zypper refresh'
+alias fuckoff='sudo snap refresh --list && sudo snap refresh && flatpak update && sudo zypper dup && poweroff'
+alias reboot='systemctl reboot'
+alias poweroff='systemctl poweroff'

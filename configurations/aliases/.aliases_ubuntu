@@ -1,0 +1,13 @@
+#---Ubuntu---
+alias aptup='sudo apt update && sudo apt full-upgrade'
+alias aptin='sudo apt install'
+alias aptrm='sudo apt remove'
+alias purge='sudo apt purge'
+alias clean='sudo apt autoremove'
+alias nalain='sudo nala install'
+alias nalarm='sudo nala remove'
+alias pkgin='rhino-pkg install'
+alias allupdate='sudo snap refresh && flatpak update && sudo apt update && sudo apt full-upgrade'
+alias updateall='sudo snap refresh && flatpak update && sudo apt update && sudo apt full-upgrade'
+alias byebyewiegehts='sudo snap refresh && flatpak update && sudo apt update && sudo apt full-upgrade && reboot'
+alias fuckoff='sudo snap refresh && flatpak update && sudo apt update && sudo apt full-upgrade && poweroff'

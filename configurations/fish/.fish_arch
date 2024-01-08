@@ -1,0 +1,5 @@
+#---Arch Linux---
+#Aliases
+source ~/.aliases_arch
+#Fish Extensions
+source /usr/share/doc/find-the-command/ftc.fish

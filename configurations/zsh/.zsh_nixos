@@ -1,0 +1,6 @@
+#---NixOS---
+#Aliases
+source ~/.aliases_nixos
+#zsh Extensions
+source ~/.local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh #Manual install
+source ~/.local/share/zsh-autosuggestions.zsh #Manual install

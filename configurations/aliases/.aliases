@@ -1,0 +1,59 @@
+# Replace ls with eza
+alias ls='eza -al --color=always --group-directories-first --icons' # preferred listing
+alias la='eza -a --color=always --group-directories-first --icons'  # all files and dirs
+alias ll='eza -l --color=always --group-directories-first --icons'  # long format
+alias lt='eza -aT --color=always --group-directories-first --icons' # tree listing
+alias l.="eza -a | egrep '^\.'"                                     # show only dotfiles
+alias ip="ip -color"
+
+#Get confirmation prompt when dealing with files
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+
+#Create folders the better way
+alias mkdir='mkdir -pv'
+
+# Common use
+alias tarnow='tar -acf '
+alias untar='tar -xvf '
+alias wget='wget -c '
+alias psmem='ps auxf | sort -nr -k 4'
+alias psmem10='ps auxf | sort -nr -k 4 | head -10'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+#The universal package managers
+alias flatin='flatpak install'
+alias flatup='flatpak update'
+alias flatrm='flatpak remove --delete-data' #Deinstallieren mit Datenlöschung
+alias snapin='sudo snap install'
+alias snapup='sudo snap refresh'
+alias snaprm='sudo snap remove --purge' #Deinstallieren mit Datenlöschung
+
+#View OS information
+alias btw='neofetch'
+alias btsw='fastfetch'
+alias btscreenw='screenfetch'
+alias uwu='uwufetch'
+alias hy='hyfetch'
+
+#View information about your hardware
+alias hw='hwinfo --short'
+alias raminfo='sudo dmidecode --type 17'
+alias cpuinfo='sudo dmidecode --type 4'
+alias mbinfo='sudo dmidecode --type 1'
+
+#Miscellaneous
+alias jctl="journalctl -p 3 -xb" # Get the error messages from journalctl
+alias logging='sudo journalctl -f'
+alias please='sudo'
+alias weather='curl wttr.in/Nordenham'
