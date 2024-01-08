@@ -21,9 +21,6 @@ fi
 
 ###Shell Design###
 eval "$(starship init zsh)"
-#Flex
-pfetch
-alias pfetchin='git clone https://github.com/dylanaraps/pfetch.git && cd pfetch && sudo make install'
 
 #PROMPT='%F{green}%n%f@%F{yellow}%m%f %F{yellow}%B%~%b%f %# '
 
