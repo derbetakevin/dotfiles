@@ -174,6 +174,7 @@
       inputs.nixos-conf-editor.packages.${system}.nixos-conf-editor
       inputs.nix-software-center.packages.${system}.nix-software-center
       chatterino2
+      clementine
       distrobox
       element-desktop
       espanso-wayland
@@ -190,8 +191,12 @@
       onedrivegui
       putty
       realvnc-vnc-viewer
+      resources
+      revolt-desktop
       rpi-imager
       skypeforlinux
+      signal-desktop
+      slack
       spice
       teamspeak_client
       teamspeak5_client

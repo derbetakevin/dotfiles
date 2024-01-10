@@ -18,6 +18,7 @@
       cool-retro-term
       duf
       eza
+      figlet
       htop
       hyfetch
       kitty
@@ -25,6 +26,7 @@
       mapscii
       mc #Midnight Commander
       neofetch
+      nushell
       pfetch-rs
       progress
       radeontop

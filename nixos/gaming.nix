@@ -34,17 +34,22 @@
     environment.systemPackages = with pkgs; [
       bottles
       cartridges
+      citra-canary
       dolphin-emu
       duckstation
       gamemode
       #heroic (I use Flatpak)
       lutris
+      mame
       mangohud
       mgba
       minecraft
       osu-lazer-bin
       pcsx2
+      ppsspp-qt
       #retroarch (I use Flatpak)
+      rpcs3
+      space-cadet-pinball
       superTuxKart
       wiiuse
       winePackages.stableFull
