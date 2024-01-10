@@ -51,9 +51,9 @@
 
     printing = {
       enable = true;
-      #drivers = with pkgs; [
-      #  epson-escpr2  # Add drivers for Epson WF-7710 printer support
-      #];
+      drivers = with pkgs; [
+        epson-escpr2  # Add drivers for Epson WF-7710 printer support
+      ];
     };
 
     spice-autorandr = {
