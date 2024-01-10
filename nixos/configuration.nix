@@ -229,6 +229,7 @@
 
   # Fonts
   fonts.packages = with pkgs; [
+    arkpandora_ttf
     dina-font
     fira-code
     fira-code-symbols
