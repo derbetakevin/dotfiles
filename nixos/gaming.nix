@@ -52,7 +52,8 @@
       space-cadet-pinball
       superTuxKart
       wiiuse
-      winePackages.stableFull
+      wineWowPackages.fonts
+      wineWowPackages.unstableFull
       winetricks
       xboxdrv
       xemu
