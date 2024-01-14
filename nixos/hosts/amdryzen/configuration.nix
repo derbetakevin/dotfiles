@@ -179,7 +179,6 @@
       element-desktop
       espanso-wayland
       filezilla
-      fluent-reader
       gimp
       google-chrome
       inkscape
@@ -187,11 +186,10 @@
       librewolf
       mcfly
       microsoft-edge
+      nextcloud-client
       obs-studio
-      onedrivegui
       putty
       realvnc-vnc-viewer
-      resources
       revolt-desktop
       rpi-imager
       skypeforlinux

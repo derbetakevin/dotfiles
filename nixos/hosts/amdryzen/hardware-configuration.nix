@@ -37,8 +37,8 @@
     fsType = "btrfs";
   };
 
-  fileSystems."/home/derbetakevin/OneDrive" = {
-    device = "/dev/disk/by-label/OneDrive";
+  fileSystems."/home/derbetakevin/Nextcloud" = {
+    device = "/dev/disk/by-label/Nextcloud";
     fsType = "xfs";
   };
 
