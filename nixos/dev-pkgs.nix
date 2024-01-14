@@ -25,7 +25,10 @@
     };
 
     environment.systemPackages = with pkgs; [
+      dotnet-runtime_7
+      #dotnet-runtime_8
       gh
+      git-credential-manager
       gitFull
       github-desktop
       gnat13
@@ -37,7 +40,6 @@
       powershell
       python311Full
       vscode #Microsoft Variante
-      vscodium #Open Source Variante
     ];
   };
 }
