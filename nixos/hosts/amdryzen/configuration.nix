@@ -5,6 +5,7 @@
     # ../../awesomewm.nix
     ../../dev-pkgs.nix
     ../../gaming.nix
+    #../../gnome.nix
     ../../gnome-games.nix
     # ../../hyprland.nix
     ../../kde.nix
@@ -12,6 +13,7 @@
     # ../../starship.nix
     ../../terminal.nix
     # ../../wayfire.nix
+    ../../web-browser.nix
     # ../../xfce.nix
   ];
 
@@ -181,6 +183,7 @@
       filezilla
       gimp
       google-chrome
+      handbrake
       inkscape
       kdenlive
       librewolf

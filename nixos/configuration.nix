@@ -194,7 +194,6 @@
     systemPackages = with pkgs; [
       inputs.nh.packages.x86_64-linux.default
       anydesk
-      brave
       conky
       discord
       evince

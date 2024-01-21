@@ -1,7 +1,6 @@
 # Acer specific config
 { config, pkgs, ... }: {
   
-  # Imports specific to the Acer
   imports = [
     # ../../awesomewm.nix
     # ../../dev-pkgs.nix
@@ -11,8 +10,10 @@
     ../../hyprland.nix
     # ../../kde.nix
     # ../../kde-gaming.nix
+    # ../../starship.nix
     ../../terminal.nix
     # ../../wayfire.nix
+    # ../../web-browser.nix
     # ../../xfce.nix
   ];
 
