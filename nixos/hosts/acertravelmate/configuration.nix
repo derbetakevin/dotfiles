@@ -10,6 +10,7 @@
     ../../hyprland.nix
     # ../../kde.nix
     # ../../kde-gaming.nix
+    # ../../obs.nix
     # ../../starship.nix
     ../../terminal.nix
     # ../../wayfire.nix
