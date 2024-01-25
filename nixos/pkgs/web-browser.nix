@@ -1,18 +1,17 @@
 # Web-Browsers
-
-{ config, pkgs, ... }: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   config = {
     programs = {
-      firefox = {
-        enable = true;
-        languagePacks = ["de"];
-        package = pkgs.firefox;
-      };
     };
     environment = {
       systemPackages = with pkgs; [
         brave
         epiphany
+        #firefox (see ./default.nix)
         google-chrome
         libsForQt5.falkon
         libsForQt5.konqueror
@@ -27,7 +26,7 @@
         tor-browser
         ungoogled-chromium
         vivaldi
-        yandex-browser
+        #yandex-browser
         #yandex-browser-beta
       ];
     };

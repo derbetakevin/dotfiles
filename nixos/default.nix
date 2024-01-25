@@ -1,9 +1,12 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, inputs, ... }: {
-  
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
   # Bootloader, Kernel, Params and modules
   boot = {
     # Specify kernel modules that are being loaded on all devices
@@ -14,9 +17,12 @@
       enable = false;
     };
 
-    # Increase the vm.max_map_count 
+    # Increase the vm.max_map_count
     kernel = {
-      sysctl = {"vm.max_map_count" = 2147483642 ; "vm.swappiness" = 5; };
+      sysctl = {
+        "vm.max_map_count" = 2147483642;
+        "vm.swappiness" = 5;
+      };
     };
   };
 
@@ -32,7 +38,7 @@
     networkmanager = {
       enable = true;
     };
-  };  
+  };
 
   # Set your time zone.
   time = {
@@ -96,25 +102,17 @@
     xserver = {
       layout = "de";
       xkbVariant = "";
+      desktopManager = {
+        xterm = {
+          enable = false; #Bye Bye XTerm
+        };
+      };
     };
   };
 
   # Configure console keymap
   console = {
     keyMap = "de";
-  };
-
-  programs = {
-    dconf = {
-      enable = true;
-    };
-    firefox = {
-      enable = true;
-      languagePacks = ["de"];
-    };
-    nano = {
-      enable = false; #Bye Bye Nano
-    };
   };
 
   sound = {
@@ -144,27 +142,7 @@
     # Enable the flake command
     extraOptions = "experimental-features = nix-command flakes";
     settings = {
-      extra-substituters = [
-        "https://viperml.cachix.org"
-      ];
-      extra-trusted-public-keys = [
-        "viperml.cachix.org-1:qZhKBMTfmcLL+OG6fj/hzsMEedgKvZVFRRAhq7j8Vh8="
-      ];
-    };
-  };
-
-
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users = {
-    users = {
-      derbetakevin = {
-        isNormalUser = true;
-        description = "Der Beta Kevin";
-        extraGroups = ["networkmanager" "wheel"];
-        packages = with pkgs; [
-        ];
-      };
+      auto-optimise-store = true;
     };
   };
 
@@ -172,89 +150,23 @@
   nixpkgs = {
     config = {
       allowUnfree = true;
-      joypixels = {
-        acceptLicense = true;
-      };
     };
   };
 
   # Enable Swap on ZRAM
   zramSwap = {
     enable = true;
-    # Set the limit to double the RAM
-    memoryPercent = 200;
+    # Set the limit to half the RAM
+    memoryPercent = 50;
   };
-
-  
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment = {
     sessionVariables = {
       FLAKE = "/home/derbetakevin/Development/dotfiles";
-      MOZ_ENABLE_WAYLAND = "1";
     };
-    systemPackages = with pkgs; [
-      inputs.nh.packages.x86_64-linux.default
-      anydesk
-      conky
-      discord
-      evince
-      fsearch
-      glxinfo
-      gnome.gnome-disk-utility
-      gparted
-      hardinfo
-      libreoffice
-      lm_sensors
-      lsb-release
-      ntfs3g
-      onlyoffice-bin
-      pciutils
-      remmina
-      shortwave
-      smartmontools
-      standardnotes
-      spotify
-      tdesktop
-      teamviewer
-      thunderbird-unwrapped
-      usbutils
-      unzip
-      vesktop
-      virt-viewer
-      vlc
-      whatsapp-for-linux
-      xdg-user-dirs
-    ];
   };
-
-  # Fonts
-  fonts.packages = with pkgs; [
-    arkpandora_ttf
-    comic-mono
-    dejavu_fonts
-    dina-font
-    fira-code
-    fira-code-symbols
-    jetbrains-mono
-    joypixels
-    hack-font
-    liberation_ttf
-    mplus-outline-fonts.githubRelease
-    nerdfonts
-    noto-fonts
-    noto-fonts-cjk
-    noto-fonts-emoji
-    openmoji-color
-    proggyfonts
-    roboto
-    symbola
-    twemoji-color-font
-    twitter-color-emoji
-    ubuntu_font_family
-    vegur
-  ];
 
   # Show the differences after a rebuild.
   system = {
@@ -267,14 +179,6 @@
       };
     };
   };
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
 
   # List services that you want to enable:
 

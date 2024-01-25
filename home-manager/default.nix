@@ -16,10 +16,10 @@
         source = ../configurations/conky;
         recursive = true;
       };
-      ".config/fastfetch" = {
-        source = ../configurations/fastfetch;
-        recursive = true;
-      };
+      #".config/fastfetch" = {
+      #  source = ../configurations/fastfetch;
+      #  recursive = true;
+      #};
       ".config/neofetch" = {
         source = ../configurations/neofetch;
         recursive = true;

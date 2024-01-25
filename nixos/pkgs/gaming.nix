@@ -1,6 +1,9 @@
-{ config, pkgs, ... }: {
-
-  config = {  
+{
+  config,
+  pkgs,
+  ...
+}: {
+  config = {
     boot = {
       blacklistedKernelModules = [
         "xpad"
@@ -18,9 +21,9 @@
     hardware = {
       steam-hardware = {
         enable = true;
-        };
       };
-    
+    };
+
     services = {
       udev = {
         extraRules = ''
@@ -29,7 +32,7 @@
         '';
       };
     };
-  
+
     # Gaming-specific packages
     environment.systemPackages = with pkgs; [
       bottles
@@ -45,7 +48,7 @@
       mgba
       minecraft
       osu-lazer-bin
-      pcsx2
+      #pcsx2
       ppsspp-qt
       #retroarch (I use Flatpak)
       rpcs3

@@ -3,13 +3,8 @@
 
   inputs = {
     # List of repos:
-    # nixpkgs          -> NixOS Unstable channel (Recommended if you plan to use GNOME)
-    # nixpkgs-stable   -> NixOS Stable channel (Currently Version 23.11)
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
-    nixos-conf-editor.url = "github:snowfallorg/nixos-conf-editor";
-    nix-software-center.url = "github:snowfallorg/nix-software-center";
-    # Home Manager (for /home files)
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable"; # -> NixOS Unstable channel (Recommended if you plan to use GNOME)
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11"; # -> NixOS Stable channel (Currently Version 23.11)
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs = {
@@ -18,18 +13,14 @@
         };
       };
     };
-    # Yet Another Nix Helper
-    nh = {
-      url = "github:viperML/nh";
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
-    };
   };
 
-  outputs = inputs @ { self, nixpkgs, ... }: {
+  outputs = inputs @ {
+    self,
+    nixpkgs,
+    home-manager,
+    ...
+  }: {
     nixosConfigurations = let
       user = "derbetakevin";
       mkHost = host:
@@ -50,9 +41,9 @@
                 users.${user} = {
                   imports = [
                     # Common Home Manager configuration
-                    ./nixos/home.nix
+                    ./home-manager/default.nix
                     # Host specific Home Manager configuration
-                    ./nixos/hosts/${host}/home.nix
+                    ./home-manager/hosts/${host}/default.nix
                   ];
 
                   home = {
@@ -69,11 +60,15 @@
             }
 
             # common configuration
-            ./nixos/configuration.nix
+            ./nixos/default.nix
+            ./nixos/users.nix
+            ./nixos/pkgs/default.nix
+            ./nixos/pkgs/fonts.nix
             # host specific configuration
-            ./nixos/hosts/${host}/configuration.nix
-            # host specific hardware configuration
-            ./nixos/hosts/${host}/hardware-configuration.nix
+            ./nixos/hosts/${host}/default.nix
+            ./nixos/hosts/${host}/hardware.nix
+            ./nixos/hosts/${host}/users.nix
+            ./nixos/pkgs/hosts/${host}/default.nix
           ];
         };
     in {
@@ -81,6 +76,7 @@
       # rebuild with `nixos-rebuild switch --flake .#<INSERT HOST HERE>`
       acertravelmate = mkHost "acertravelmate";
       amdryzen = mkHost "amdryzen";
+      vm = mkHost "vm";
     };
   };
 }
