@@ -4,6 +4,14 @@
   ...
 }: {
   config = {
+    nixpkgs = {
+      config = {
+        permittedInsecurePackages = [
+          "pulsar-1.109.0"
+        ];
+      };
+    };
+
     programs = {
       adb = {
         enable = true;
@@ -42,6 +50,7 @@
       nix-prefetch-scripts
       pkg-config
       powershell
+      pulsar
       python311Full
       vscode
     ];
