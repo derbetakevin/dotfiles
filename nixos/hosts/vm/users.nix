@@ -7,12 +7,8 @@
   users = {
     users = {
       derbetakevin = {
-        extraGroups = [
-        ];
+        shell = pkgs.bash;
       };
-    };
-
-    groups = {
     };
   };
 }
