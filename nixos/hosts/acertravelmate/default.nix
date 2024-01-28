@@ -1,24 +1,30 @@
 # Acer specific config
-{ config, pkgs, ... }: {
-  
+{
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
-    # ../../awesomewm.nix
-    # ../../dev-pkgs.nix
-    # ../../gaming.nix
-    # ../../gnome.nix
-    # ../../gnome-gaming.nix
-    ../../hyprland.nix
-    # ../../kde.nix
-    # ../../kde-gaming.nix
-    # ../../obs.nix
+    # ../../pkgs/awesomewm/default.nix
+    # ../../pkgs/dev.nix
+    # ../../pkgs/distrobox.nix
+    # ../../pkgs/gaming.nix
+    #../../pkgs/gnome/default.nix
+    # ../../pkgs/gnome/games.nix
+    ../../pkgs/hyprland/default.nix
+    # ../../pkgs/kde/default.nix
+    # ../../pkgs/kde/games.nix
+    # ../../pkgs/obs.nix
+    # ../../pkgs/qemu-kvm.nix
     # ../../starship.nix
-    ../../terminal.nix
-    # ../../wayfire.nix
-    # ../../web-browser.nix
-    # ../../xfce.nix
+    ../../pkgs/terminal.nix
+    # ../../pkgs/virtualbox.nix
+    # ../../pkgs/wayfire/default.nix
+    # ../../pkgs/web-browser.nix
+    # ../../pkgs/xfce/default.nix
   ];
 
-  # Bootloader has to be done per machine, since the Acer doesn't 
+  # Bootloader has to be done per machine, since the Acer doesn't
   # support UEFI.
   boot = {
     loader = {
@@ -33,53 +39,23 @@
 
   # Hostname, networking and bluetooth
   networking = {
-    # Specify hostname
     hostName = "AcerNix2306-1";
   };
-  
+
   # Services are good. Services are great. We should use them!
   services = {
-    
-    # Enable printing service via CUPS
     printing = {
       enable = true;
-      # Add drivers for Epson WF-7710 printer support
       drivers = with pkgs; [
-        epson-escpr2
+        epson-escpr2 # Add drivers for Epson WF-7710 printer support
       ];
     };
 
-    # Add JACK support to PipeWire
+    # Remove JACK support from PipeWire
     pipewire = {
-      jack.enable = false;
-    };
-  };
-
-  # Enable zsh-Shell
-  programs.zsh.enable = true;
-
-  # User account related things specific
-  users = {
-    users = {
-      derbetakevin = {
-        extraGroups = [];
-        shell = pkgs.zsh;
+      jack = {
+        enable = false;
       };
     };
-
-    groups = {
-      libvirtd = {
-        members = ["root" "derbetakevin"];
-      };
-    };
-  };
-
-  # Environment related things specific
-  environment = {
-    
-    # Packages specific
-    systemPackages = with pkgs; [
-      gitFull
-    ];
   };
 }
