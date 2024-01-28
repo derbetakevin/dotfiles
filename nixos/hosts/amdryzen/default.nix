@@ -19,7 +19,7 @@
     ../../pkgs/qemu-kvm.nix
     # ../../starship.nix
     ../../pkgs/terminal.nix
-    ../../pkgs/virtualbox.nix
+    # ../../pkgs/virtualbox.nix
     # ../../pkgs/wayfire/default.nix
     ../../pkgs/web-browser.nix
     # ../../pkgs/xfce/default.nix
