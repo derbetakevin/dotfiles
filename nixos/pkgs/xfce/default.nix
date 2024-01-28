@@ -40,6 +40,7 @@
       };
 
       systemPackages = with pkgs.xfce; [
+        xfce4-sensors-plugin
         xfce4-whiskermenu-plugin
       ];
 
