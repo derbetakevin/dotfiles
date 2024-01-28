@@ -43,28 +43,45 @@
 
     environment = {
       systemPackages = with pkgs; [
+        anydesk
         chatterino2
         clementine
+        conky
+        discord
         element-desktop
         espanso-wayland
+        evince
         filezilla
+        fsearch
         gimp
         handbrake
         inkscape
         kdenlive
+        libreoffice
         mcfly
         nextcloud-client
+        onlyoffice-bin
         putty
         realvnc-vnc-viewer
+        remmina
         revolt-desktop
         rpi-imager
         skypeforlinux
         signal-desktop
+        shortwave
         slack
+        spotify
+        standardnotes
+        tdesktop
         teamspeak_client
         teamspeak5_client
+        teamviewer
         ted
+        thunderbird-unwrapped
+        vesktop
         vivaldi
+        vlc
+        whatsapp-for-linux
       ];
     };
   };
