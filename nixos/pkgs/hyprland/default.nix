@@ -1,12 +1,21 @@
-{ config, pkgs, inputs, system, security, ... }:
-  
+# Hyprland Config
 {
+  config,
+  pkgs,
+  inputs,
+  system,
+  security,
+  ...
+}: {
   config = {
     services = {
       xserver = {
         enable = true;
-        displayManager.sddm = {
-          enable = true;
+        displayManager = {
+          gdm = {
+            enable = true;
+            wayland = true;
+          };
         };
         layout = "de";
         xkbVariant = "";
@@ -30,7 +39,7 @@
           swaylock = {
             text = "auth include login";
           };
-        };    
+        };
       };
 
       polkit = {
@@ -43,7 +52,7 @@
       hyprland = {
         enable = true;
       };
-    };    
+    };
 
     # Polkit on Hyprland needs some extra love
     systemd = {
@@ -51,9 +60,9 @@
         services = {
           polkit-gnome-authentication-agent-1 = {
             description = "polkit-gnome-authentication-agent-1";
-            wantedBy = [ "graphical-session.target" ];
-            wants = [ "graphical-session.target" ];
-            after = [ "graphical-session.target" ];
+            wantedBy = ["graphical-session.target"];
+            wants = ["graphical-session.target"];
+            after = ["graphical-session.target"];
             serviceConfig = {
               Type = "simple";
               ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
@@ -61,7 +70,7 @@
               RestartSec = 1;
               TimeoutStopSec = 10;
             };
-          };    
+          };
         };
       };
     };
@@ -77,43 +86,47 @@
       };
     };
 
-# Hyprland-specific packages
+    # Hyprland-specific packages
     environment = {
-      systemPackages = with pkgs; [
-        dunst
-        ffmpeg
-        ffmpegthumbnailer
-        grimblast
-        kitty
-        nwg-look
-        pamixer
-        pavucontrol
-        playerctl
-        polkit_gnome
-        rofi
-        swaybg
-        swaylock-effects
-        viewnior
-        waybar
-        wlogout
-        wl-clipboard
-        xarchiver
-      ] ++ (with libsForQt5; [
-        sddm-kcm
-      ]) ++ (with libsForQt5.qt5; [
-        qtgraphicaleffects
-      ]) ++ (with lxqt; [
-        lxqt-policykit
-      ]) ++ (with xfce; [
-        thunar
-        thunar-volman
-        thunar-archive-plugin
-        tumbler
-      ]);
-      
+      systemPackages = with pkgs;
+        [
+          arandr
+          dunst
+          ffmpeg
+          ffmpegthumbnailer
+          grimblast
+          kitty
+          nwg-dock-hyprland
+          nwg-look
+          pamixer
+          pavucontrol
+          playerctl
+          polkit_gnome
+          rofi
+          swaybg
+          swaylock-effects
+          viewnior
+          waybar
+          wlogout
+          wl-clipboard
+          xarchiver
+        ]
+        ++ (with libsForQt5.qt5; [
+          qtgraphicaleffects
+        ])
+        ++ (with lxqt; [
+          lxqt-policykit
+        ])
+        ++ (with xfce; [
+          thunar
+          thunar-volman
+          thunar-archive-plugin
+          tumbler
+        ]);
+
       variables = {
         POLKIT_BIN = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
       };
     };
-  };  
+  };
 }
