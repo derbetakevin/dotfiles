@@ -23,6 +23,7 @@
 
     environment = {
       systemPackages = with pkgs; [
+        inputs.home-manager.packages.${pkgs.system}.default # Home-Manager as command
         fd # Terminal File Search
         gitFull # No git = no flakes
         gh # GitHub CLI tool
