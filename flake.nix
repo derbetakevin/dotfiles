@@ -3,7 +3,7 @@
 
   inputs = {
     # List of repos:
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable"; # -> NixOS Unstable channel (Recommended if you plan to use GNOME)
+    nixpkgs.url = "github:nixos/nixpkgs/a136def4f7256146b32e3625e53dcdf7464165f9"; # -> NixOS Unstable channel (Temporairly hardcoded to an older commit to prevent the amdgpu firmware issue)
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11"; # -> NixOS Stable channel (Currently Version 23.11)
     home-manager = {
       url = "github:nix-community/home-manager";
