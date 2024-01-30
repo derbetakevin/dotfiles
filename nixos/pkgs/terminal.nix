@@ -25,7 +25,6 @@
       duf
       eza
       fastfetch
-      fd # Terminal File Search
       figlet
       htop
       hyfetch
