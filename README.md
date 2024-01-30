@@ -1,4 +1,10 @@
 [![wakatime](https://wakatime.com/badge/user/682e2c58-c624-4d98-8b0b-67a56585cdd2/project/a7a422e2-0a25-4e1f-9939-daba15cfaa4a.svg)](https://wakatime.com/badge/user/682e2c58-c624-4d98-8b0b-67a56585cdd2/project/a7a422e2-0a25-4e1f-9939-daba15cfaa4a)
+![GitHub last commit](https://img.shields.io/github/last-commit/derbetakevin/dotfiles)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/derbetakevin/dotfiles)
+![GitHub repo size](https://img.shields.io/github/repo-size/derbetakevin/dotfiles)
+![GitHub top language](https://img.shields.io/github/languages/top/derbetakevin/dotfiles)
+![GitHub License](https://img.shields.io/github/license/derbetakevin/dotfiles)
+
 
 <h1 align="center">Der Beta Kevin’s dotfiles</h1>
 
@@ -9,11 +15,24 @@ My compilation of configuration files, and more. Feel free to poke around and if
 * [QT programs on Arch in Dark Mode](https://github.com/derbetakevin/dotfiles-old/wiki/QT-programs-on-Arch-in-Dark-Mode)
 
 ## nixos-flakes
-My Flake-Configuration for NixOS
+My Flake-Configuration for NixOS with [Home-Manager](https://github.com/nix-community/home-manager)
 
 ### My Personal Computers
-- Acer Travelmate 5760
-- AMD Ryzen 5 2400G with MSI B450 A-PRO
+- Acer Travelmate 5760 | `acertravelmate`
+- AMD Ryzen 5 2400G with MSI B450 A-PRO | `amdryzen`
+
+
+### Install
+```bash
+git clone https://github.com/derbetakevin/dotfiles
+cd dotfiles
+nix-shell -p nixFlakes
+sudo nixos-install --flake .#hostname
+```
+### Rebuild
+- [Standalone](https://nixos.wiki/wiki/Nixos-rebuild): `nixos-rebuild switch --flake .#hostname`
+- [nh (yet-another-nix-helper)](https://github.com/viperML/nh) `nh os switch --nom --hostname hostname` or with `--ask`
+- Home-Manager only: `home-manager switch -f $FLAKE/home-manager/hosts/hostname/default.nix`
 
 ### Available DE/WM
 #### Desktop Environments
