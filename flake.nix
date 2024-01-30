@@ -41,7 +41,7 @@
                 users.${user} = {
                   imports = [
                     # Common Home Manager configuration
-                    ./home-manager/default.nix
+                    # ./home-manager/default.nix
                     # Host specific Home Manager configuration
                     ./home-manager/hosts/${host}/default.nix
                   ];

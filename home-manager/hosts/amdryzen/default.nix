@@ -1,3 +1,4 @@
+# Home Manager Configuration for amdryzen
 {
   config,
   lib,
@@ -5,6 +6,7 @@
   ...
 }: {
   imports = [
+    ../../default.nix
     ./hyprconf.nix
     ../../hyprconf.nix
     ../../theme.nix

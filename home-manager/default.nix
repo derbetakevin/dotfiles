@@ -1,8 +1,12 @@
 # Home Manager Configuration for all devices
-
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: let
+  user = "derbetakevin";
+in {
   home = {
     packages = with pkgs; [
     ];
@@ -45,5 +49,11 @@
         source = ../configurations/aliases/.aliases_nixos_flake;
       };
     };
+  };
+
+  home = {
+    username = user;
+    homeDirectory = "/home/${user}";
+    stateVersion = "23.05";
   };
 }
