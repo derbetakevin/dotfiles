@@ -35,6 +35,7 @@
       mc #Midnight Commander
       neofetch
       nushell
+      onefetch
       owofetch
       pfetch-rs
       profetch
