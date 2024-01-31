@@ -16,6 +16,10 @@
         source = ../configurations/rofi;
         recursive = true;
       };
+      ".config/swaync" = {
+        source = ../configurations/swaync;
+        recursive = true;
+      };
       ".config/waybar" = {
         source = ../configurations/waybar;
         recursive = true;

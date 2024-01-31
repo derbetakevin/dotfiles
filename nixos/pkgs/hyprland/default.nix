@@ -91,7 +91,6 @@
       systemPackages = with pkgs;
         [
           arandr
-          dunst
           ffmpeg
           ffmpegthumbnailer
           grimblast
@@ -105,6 +104,7 @@
           rofi
           swaybg
           swaylock-effects
+          swaynotificationcenter
           viewnior
           waybar
           wlogout
