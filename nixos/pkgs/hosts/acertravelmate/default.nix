@@ -12,6 +12,7 @@
     };
     environment = {
       systemPackages = with pkgs; [
+        chatterino2
         discord
         libreoffice
         tdesktop
