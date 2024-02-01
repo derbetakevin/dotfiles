@@ -137,6 +137,8 @@ tooltip label {
 #submap,
 #mode,
 /* #tray, */
+#custom-kernel,
+#custom-temp,
 #cpu,
 #memory,
 #backlight,
