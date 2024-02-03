@@ -35,6 +35,12 @@
       };
     };
 
+    services = {
+      teamviewer = {
+        enable = true;
+      };
+    };
+
     virtualisation = {
       waydroid = {
         enable = true;
