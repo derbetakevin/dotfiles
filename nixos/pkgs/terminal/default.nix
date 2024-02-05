@@ -1,14 +1,16 @@
 # Packages for the default terminal experience
-{ 
+{
   config,
   pkgs,
   ...
 }: {
   config = {
-    neovim = {
-      enable = true;
-      package = pkgs.neovim;
-      defaultEditor = true;
+    programs = {
+      neovim = {
+        enable = true;
+        package = pkgs.neovim-unwrapped;
+        defaultEditor = true;
+      };
     };
     environment = {
       systemPackages = with pkgs; [
