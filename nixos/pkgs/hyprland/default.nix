@@ -17,8 +17,6 @@
             wayland = true;
           };
         };
-        layout = "de";
-        xkbVariant = "";
       };
 
       gvfs = {

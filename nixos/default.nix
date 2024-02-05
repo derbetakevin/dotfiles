@@ -100,8 +100,11 @@
     };
 
     xserver = {
-      layout = "de";
-      xkbVariant = "";
+      xkb = {
+        layout = "de";
+        variant = "";
+      };
+
       desktopManager = {
         xterm = {
           enable = false; #Bye Bye XTerm
