@@ -41,7 +41,6 @@
       dotnet-runtime_7
       #dotnet-runtime_8
       gh
-      git-credential-manager
       github-desktop
       gnat13
       gnumake
