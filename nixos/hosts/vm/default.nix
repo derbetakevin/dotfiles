@@ -1,4 +1,4 @@
-# Virtual Machine specific config
+ Virtual Machine specific config
 {
   config,
   pkgs,
@@ -17,7 +17,8 @@
     # ../../pkgs/obs.nix
     # ../../pkgs/qemu-kvm.nix
     # ../../starship.nix
-    # ../../pkgs/terminal.nix
+    ../../pkgs/terminal/default.nix
+    ../../pkgs/terminal/extra.nix
     # ../../pkgs/wayfire/default.nix
     # ../../pkgs/web-browser.nix
     ../../pkgs/xfce/default.nix

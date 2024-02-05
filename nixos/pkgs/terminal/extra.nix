@@ -1,4 +1,4 @@
-# Packages for the best terminal
+# Packages for the best terminal experience
 {
   config,
   pkgs,
@@ -6,47 +6,36 @@
 }: {
   config = {
     programs = {
-      command-not-found = {
+      yazi = {
         enable = true;
-      };
-      neovim = {
-        defaultEditor = true;
-        enable = true;
+        package = pkgs.yazi;
       };
     };
     environment.systemPackages = with pkgs; [
       agedu
       alacritty
-      btop
       bunnyfetch
       cmatrix
       cool-retro-term
       cpufetch
-      duf
-      eza
       fastfetch
       figlet
-      htop
+      foot
       hyfetch
       ipfetch
-      kitty
       lsd
       mapscii
       mc #Midnight Commander
-      neofetch
       nushell
       onefetch
       owofetch
-      pfetch-rs
       profetch
       progress
       screenfetch
       radeontop
       ranger
-      starship
       tiv #Terminal Image Viewer
       uwufetch
-      wget
     ];
   };
 }
