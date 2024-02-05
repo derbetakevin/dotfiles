@@ -1,4 +1,4 @@
-# amdryzen specific config
+# Virtual Machine specific config
 {
   config,
   pkgs,
@@ -33,7 +33,7 @@
       };
     };
 
-    kernelPackages = pkgs.linuxPackages_libre;
+    kernelPackages = pkgs.linuxPackages-libre;
   };
 
   networking = {
