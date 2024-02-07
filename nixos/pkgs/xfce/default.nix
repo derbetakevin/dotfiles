@@ -40,6 +40,7 @@
       };
 
       systemPackages = with pkgs.xfce; [
+        mousepad
         xfce4-sensors-plugin
         xfce4-whiskermenu-plugin
       ];

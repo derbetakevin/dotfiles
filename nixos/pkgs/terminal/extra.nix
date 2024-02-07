@@ -1,4 +1,4 @@
-# Packages for the best terminal experience
+# Packages for the extra terminal experience
 {
   config,
   pkgs,

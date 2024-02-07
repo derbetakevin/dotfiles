@@ -67,6 +67,7 @@
         mcfly
         nextcloud-client
         onlyoffice-bin
+        peazip
         putty
         realvnc-vnc-viewer
         remmina
@@ -85,9 +86,9 @@
         ted
         thunderbird-unwrapped
         vesktop
-        vivaldi
         vlc
         whatsapp-for-linux
+        xfce.mousepad
       ];
     };
   };
