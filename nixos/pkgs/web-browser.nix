@@ -26,6 +26,7 @@
         tor-browser
         ungoogled-chromium
         vivaldi
+        vivaldi-ffmpeg-codecs
         #yandex-browser
         #yandex-browser-beta
       ];
