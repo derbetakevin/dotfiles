@@ -27,8 +27,8 @@ My compilation of configuration files, and more. Feel free to poke around and if
 > [![Repository status](https://repology.org/badge/repository-big/nix_stable_22_05.svg?header=nixpkgs+stable+22.05)](https://repology.org/repository/nix_stable_22_05)
 > [![Repository status](https://repology.org/badge/repository-big/arch.svg?header=Arch)](https://repology.org/repository/arch)
 > [![Repository status](https://repology.org/badge/repository-big/aur.svg?header=AUR)](https://repology.org/repository/aur)
+> [![Repository status](https://repology.org/badge/repository-big/debian_12.svg?header=Debian+12)](https://repology.org/repository/debian_12)
 > [![Repository status](https://repology.org/badge/repository-big/fedora_39.svg?header=Fedora+39)](https://repology.org/repository/fedora_39)
-> [![Repository status](https://repology.org/badge/repository-big/opensuse_tumbleweed.svg?header=openSUSE+Tumbleweed)](https://repology.org/repository/opensuse_tumbleweed)
 > [![Repository status](https://repology.org/badge/repository-big/ubuntu_24_04.svg?header=Ubuntu+24.04)](https://repology.org/repository/ubuntu_24_04)
 > </details>
 
