@@ -116,6 +116,7 @@
           lxqt-policykit
         ])
         ++ (with xfce; [
+          orage
           thunar
           thunar-volman
           thunar-archive-plugin
