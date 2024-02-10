@@ -20,6 +20,7 @@
         htop
         kitty
         neofetch
+        neovide
         pfetch-rs
         starship
         wget
