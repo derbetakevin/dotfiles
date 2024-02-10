@@ -51,6 +51,7 @@
       powershell
       pulsar
       python311Full
+      rustup
       vscode
     ];
   };
